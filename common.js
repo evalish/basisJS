@@ -1,11 +1,7 @@
-var number = 205.35;
-//console.log( number.toFixed(2) );
-//console.log( number.toExponential() );
-//console.log( number.toPrecision(2) );
-//console.log( number.toString() );
-//console.log ( Math.sqrt(81) );
-//console.log ( Math.pow(5,2) );
-//console.log ( Math.floor(number) );
-//console.log ( Math.ceil(number) );
-//console.log ( Math.round(number) );
-console.log ( Math.PI );
+var str = '"string" is a data type';
+    str2 = "\"string\" is a data type";
+    longStr = 'длинная \n \tстрока \bполучилась';
+    //console.log( longStr.length );
+    //console.log( 'hello' + ' world');
+    console.log ('hello'.concat(' world'));
+   
