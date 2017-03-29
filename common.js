@@ -1,25 +1,12 @@
-var obj = {},
-    param,
-    arr = [1,2,3];
-//console.log(Boolean(NaN));
-//.log(Boolean(""));
-//console.log(Boolean(0));
-//console.log(Boolean(undefined));
-//console.log(Boolean(null));
+//console.log(typeof String(455) );
+//console.log(typeof Number('455') );
+//console.log(typeof Boolean(455) );
 
-//console.log(Boolean("fdgdfg"));
-//console.log(Boolean(45344));
-//console.log(Boolean(obj));
-var bool = "str";
-if (bool) {
-	//console.log ( "Hi man!")
-};
-var func = function(arg) {
-	console.log(arg)
+//console.log( typeof (234 +'') ); // быстро в строку
+//console.log( typeof (+'234') ); // быстро в число
+//console.log( typeof (!!'234') ); // быстро в буль
 
-};
-console.log( param );
-
-console.log( obj.paramp );
-console.log( arr[7] );
-func("Bill");
+var num = 777;
+console.log( typeof num.toString() );
+console.log( parseInt('123', 10) );
+console.log( parseFloat("100.24 px", 10));
