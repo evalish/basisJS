@@ -1,12 +1,21 @@
-//console.log(typeof String(455) );
-//console.log(typeof Number('455') );
-//console.log(typeof Boolean(455) );
+//var obj = new Object();
+ var obj = {
+ 	super : 'string' ,
+ 	func : function() {
+ 		console.log( this.super );
+ 	}
+ };
+ //console.log( typeof obj['super'] || 'fuck' );
+ obj.ddd = 'Gans';
+ obj.super = 'Banan';
+ //console.log( obj );
+ var a ={prop: 1}, b = {prop: 2}, c = {prop: 3};
 
-//console.log( typeof (234 +'') ); // быстро в строку
-//console.log( typeof (+'234') ); // быстро в число
-//console.log( typeof (!!'234') ); // быстро в буль
+ a = b = c = {prop: 'allTheSame'};
 
-var num = 777;
-console.log( typeof num.toString() );
-console.log( parseInt('123', 10) );
-console.log( parseFloat("100.24 px", 10));
+ //console.log(a, b, c);
+ var y = obj;
+ //console.log( y.super);
+ //delete obj.super;
+ console.log( obj );
+ obj.func();
