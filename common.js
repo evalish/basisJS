@@ -1,21 +1,16 @@
-//var obj = new Object();
- var obj = {
- 	super : 'string' ,
- 	func : function() {
- 		console.log( this.super );
- 	}
- };
- //console.log( typeof obj['super'] || 'fuck' );
- obj.ddd = 'Gans';
- obj.super = 'Banan';
- //console.log( obj );
- var a ={prop: 1}, b = {prop: 2}, c = {prop: 3};
-
- a = b = c = {prop: 'allTheSame'};
-
- //console.log(a, b, c);
- var y = obj;
- //console.log( y.super);
- //delete obj.super;
- console.log( obj );
- obj.func();
+var arr = [ 1, 2,'str',{}, 14, 21, 3];
+var arr2 = new Array(1,2,3);
+//arr[5] = 'five';
+//arr[0] = 0;
+//arr.splice(2,1);
+//console.log(arr);
+//var arr3 = arr.concat(arr2);
+//arr.push('new2') ;
+//arr.pop();
+//arr.unshift('new3');
+//arr.shift();
+//arr.reverse();
+//console.log( arr );
+// var sliced = arr.slice(0,1);
+console.log(arr);
+console.log( arr.sort());
