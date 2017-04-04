@@ -1,16 +1,31 @@
-var arr = [ 1, 2,'str',{}, 14, 21, 3];
-var arr2 = new Array(1,2,3);
-//arr[5] = 'five';
-//arr[0] = 0;
-//arr.splice(2,1);
-//console.log(arr);
-//var arr3 = arr.concat(arr2);
-//arr.push('new2') ;
-//arr.pop();
-//arr.unshift('new3');
-//arr.shift();
-//arr.reverse();
-//console.log( arr );
-// var sliced = arr.slice(0,1);
-console.log(arr);
-console.log( arr.sort());
+var i;
+var arr = [1,2,3],
+    len = arr.length;
+
+//for( i=0; i< len; i++ ){
+//	console.log( arr[i] );
+//};
+
+//цикл for if
+var obj = {
+	prop: 'one',
+	propSecond: 'two'
+},
+inter;
+//for ( inter in obj ) {
+//	if ( obj.hasOwnProperty(inter)){
+//	console.log( inter + ' : ' + obj[inter]);
+//}
+//}
+
+//цикл while
+//var k = 0;
+
+//while ( k<10 ) {
+//	console.log( k++ );
+//};
+//do while
+var h = 0;
+do{
+console.log( h++ );
+} while (h<1);
