@@ -1,31 +1,67 @@
-var i;
-var arr = [1,2,3],
-    len = arr.length;
+function func(a, b) {
+	return a + b;
 
-//for( i=0; i< len; i++ ){
-//	console.log( arr[i] );
-//};
+}
+//console.log( func(3,4) );
+var funcExp = function( a, b){
+	return a + b;
+};
+//console.log( funcExp(2 ,3));
 
-//цикл for if
-var obj = {
-	prop: 'one',
-	propSecond: 'two'
-},
-inter;
-//for ( inter in obj ) {
-//	if ( obj.hasOwnProperty(inter)){
-//	console.log( inter + ' : ' + obj[inter]);
-//}
-//}
 
-//цикл while
-//var k = 0;
+function func1() {
+	function funcExample() {
+		return 'one';
+	}
+	
+	return funcExample();
 
-//while ( k<10 ) {
-//	console.log( k++ );
-//};
-//do while
-var h = 0;
-do{
-console.log( h++ );
-} while (h<1);
+	function funcExample() {
+		return 'two';
+	}
+};
+
+//console.log( func1() );
+function func2() {
+	var funcExample = function () {
+		return 'one' ;
+
+	}
+	var variable = funcExample();
+	var funcExample = function () {
+		return 'two';
+	}
+	return variable;
+};
+//console.log( func2() );
+
+// Функция обратного вызова
+var func = function(callback){
+	var name = "Nick";
+	return callback(name);
+
+};
+//console.log( func(function(n) {
+//	return "Hello " + n;
+//}));
+//возвращение функции
+var func1 = function() {
+	return function(){
+		//console.log('Hello!!!');
+	}
+};
+func1()();
+
+;(function() {
+	//console.log( 'Hello  от анонимной самовызывающейся функции!!!');
+})();
+
+var funcArgs = function() {
+	var i,  
+	    sun = 0;
+	for (i = 0; i < arguments.length; i++) {
+		sun += arguments[i];
+	};
+	return sun;
+};
+console.log( funcArgs(1,2,3) );
