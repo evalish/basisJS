@@ -1,67 +1,37 @@
-function func(a, b) {
-	return a + b;
+var oneOne = 1;
+globall = 2444;
 
-}
-//console.log( func(3,4) );
-var funcExp = function( a, b){
-	return a + b;
-};
-//console.log( funcExp(2 ,3));
-
-
-function func1() {
-	function funcExample() {
-		return 'one';
-	}
-	
-	return funcExample();
-
-	function funcExample() {
-		return 'two';
-	}
-};
-
-//console.log( func1() );
-function func2() {
-	var funcExample = function () {
-		return 'one' ;
+var outer = function () {
+	var arr1 = [1,2,3];
+	for (var i = 0; i < arr1.length; i++) {
+		//console.log ( i );
+		inner();
+		//console.log( "Первый цикл" );
 
 	}
-	var variable = funcExample();
-	var funcExample = function () {
-		return 'two';
-	}
-	return variable;
 };
-//console.log( func2() );
+var inner = function() {
+	var arr2 = [4,6,8];
+	for (var i = 0; i < arr2.length; i++) {
+		//console.log( i );
+		//console.log( "Второй цикл" );
 
-// Функция обратного вызова
-var func = function(callback){
-	var name = "Nick";
-	return callback(name);
-
-};
-//console.log( func(function(n) {
-//	return "Hello " + n;
-//}));
-//возвращение функции
-var func1 = function() {
-	return function(){
-		//console.log('Hello!!!');
 	}
 };
-func1()();
+outer();
 
-;(function() {
-	//console.log( 'Hello  от анонимной самовызывающейся функции!!!');
-})();
+var k = 4;
+var outerScope = function() {
 
-var funcArgs = function() {
-	var i,  
-	    sun = 0;
-	for (i = 0; i < arguments.length; i++) {
-		sun += arguments[i];
+	console.log( k );
+	var k = 8;
+	console.log( k );
+
+	var innerScope = function() {
+		console.log( k );
+		var k = 12;
 	};
-	return sun;
+	innerScope();
+	console.log( k );
 };
-console.log( funcArgs(1,2,3) );
+outerScope();
