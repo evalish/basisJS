@@ -1,18 +1,27 @@
-var foo = 'String';
+(function() {
+ var elems = document.getElementsByTagName("p"),
+     classElems = document.getElementsByClassName("paragraph"),
+     idElem = document.getElementById("four");
+     elemSelector = document.querySelector("p");
+     elemsSelector = document.querySelectorAll("p");
+     elemsInDiv = document.querySelectorAll("div p");
+  // console.log( elemsInDiv );
+  //console.log( elemsSelector ) ;  
+ //console.log( elemsSelector );
+ //console.log( idElem );
+ //console.log( classElems );
+ 
+ //console.log( elems );
 
-//console.log( navigator.userAgent );
-// console.log( navigator.platform );
-// console.log( screen.width + ' x '+screen.height );
-// console.log( location.toString() );
-// console.log( frames );
-// console.log( history );
-// window.confirm( 'BOM' );
+ for (var i = 0, len = elems.length; i < len; i++ ) {
+ //console.log( elems[i].tagName );
+ //console.log( elems[i].parentNode );
+ //console.log( elems[i].previousSibling );
+ //console.log( elems[i].previousSibling.previousSibling);
+ //console.log( elems[i].previousSibling.nodeName);
+//console.log( elems[i].nodeType );
 
-var bar = window.prompt();
+ }
 
-if ( bar === "Привет") {
-	alert( "Привет и тебе от BOM!" )
-} else {
-	alert( "Пока!" );
-};
-
+})();
+console.log( document.querySelector("div").children );
