@@ -1,20 +1,21 @@
 (function() {
+ var div = document.getElementById('test'),
+     style = div.style;
 
-var doc = document,
-    elem = doc.createElement("p"), //создать узел элемента
-    content = doc.createTextNode("Это текстовый узел"), //создать текстовый узел
-    wrappedP = doc.getElementById("wrapped");
-//elem.innerHTML = '<strong>Это динамически созданный элемент</strong>';
-//elem.appendChild(content);
- //elem.setAttribute("id", "mrCook");
-//elem.id = "mrCook";
-//wrappedP.parentNode.removeChild(elem);
-//wrappedP.parentNode.removeChild(wrappedP);
-elem.appendChild(content);
+     //style.color = "red";
+    //style.backgroundColor = "black";
+     //style.border = "5px solid blue";
+     //style.padding = "3px";
+     div.className = " css-class  css-class-new ";
+     //div.className = "";
+     div.className = div.className.replace(" css-class ", "");
+     div.classList.add('css-class');
 
-console.log( elem );
+     div.classList.remove('css-class');
 
-wrappedP.parentNode.appendChild(elem);
-//wrappedP.parentNode.insertBefore(elem, wrappedP);
-//wrappedP.parentNode.replaceChild(elem, wrappedP);
+     div.classList.toggle('css-class');
+
+
+
+ //console.log( div );
 })();
